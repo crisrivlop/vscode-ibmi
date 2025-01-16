@@ -50,14 +50,15 @@ export class ExtendedIBMiContent {
       }
 
       let rows;
+      const sourceDateField = 'case when try_cast(srcdat as numeric(6)) is null then 0 else srcdat end srcdat'
       if (sourceColourSupport)
         rows = await connection.runSQL(
-          `select srcdat, rtrim(translate(srcdta, ${SEU_GREEN_UL_RI_temp}, ${SEU_GREEN_UL_RI})) as srcdta from ${aliasPath}`,
+          `select ${sourceDateField}, rtrim(translate(srcdta, ${SEU_GREEN_UL_RI_temp}, ${SEU_GREEN_UL_RI})) as srcdta from ${aliasPath}`,
           {forceSafe: true}
         );
       else
         rows = await connection.runSQL(
-          `select srcdat, srcdta from ${aliasPath}`,
+          `select ${sourceDateField}, srcdta from ${aliasPath}`,
           {forceSafe: true}
         );
 
