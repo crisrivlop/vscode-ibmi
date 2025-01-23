@@ -59,4 +59,5 @@ Thanks so much to everyone [who has contributed](https://github.com/codefori/vsc
 * [@NicolasSchindler](https://github.com/NicolasSchindler)
 * [@marcin-ogon](https://github.com/marcin-ogon)
 * [@Detrytus59](https://github.com/Detrytus59)
+* [@janfh](https://github.com/janfh)
 * [@crisrivlop](https://github.com/crisrivlop)
